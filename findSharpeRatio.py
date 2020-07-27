@@ -28,11 +28,11 @@ get_ipython().run_cell_magic('nose', '', '\ndef test_benchmark_data():\n    asse
 print('Stocks\n')
 stock_data.info()
 print(stock_data.head())
-# ... YOUR CODE FOR TASK 2 HERE ...
+
 
 # Display summary for benchmark_data
 print('\nBenchmarks\n')
-# ... YOUR CODE FOR TASK 2 HERE ...
+
 print(benchmark_data.head())
 
 
@@ -49,12 +49,12 @@ get_ipython().run_cell_magic('nose', '', '\ndef test_nothing():\n    pass')
 
 
 # visualize the stock_data
-# ... YOUR CODE FOR TASK 3 HERE ...
+
 stock_data.plot(title='Stock Data',subplots=True)
 
 
 # summarize the stock_data
-# ... YOUR CODE FOR TASK 3 HERE ...
+
 print(stock_data.info())
 
 
@@ -71,12 +71,12 @@ get_ipython().run_cell_magic('nose', '', '\ndef test_nothing():\n    pass')
 
 
 # plot the benchmark_data
-# ... YOUR CODE FOR TASK 4 HERE ...
+
 benchmark_data.plot(title='Benchmark Data',subplots=True)
 
 
 # summarize the benchmark_data
-# ... YOUR CODE FOR TASK 4 HERE ...
+
 print(benchmark_data.describe())
 
 
@@ -97,11 +97,11 @@ get_ipython().run_cell_magic('nose', '', '\ndef test_nothing():\n    pass')
 stock_returns = stock_data.pct_change()
 
 # plot the daily returns
-# ... YOUR CODE FOR TASK 5 HERE ...
+
 stock_returns.plot()
 
 # summarize the daily returns
-# ... YOUR CODE FOR TASK 5 HERE ...
+
 stock_returns.describe()
 
 
@@ -118,15 +118,15 @@ get_ipython().run_cell_magic('nose', '', "\ndef test_stock_returns():\n    asser
 
 
 # calculate daily benchmark_data returns
-# ... YOUR CODE FOR TASK 6 HERE ...
+
 sp_returns = benchmark_data['S&P 500'].pct_change()
 
 # plot the daily returns
-# ... YOUR CODE FOR TASK 6 HERE ...
+
 sp_returns.plot()
 
 # summarize the daily returns
-# ... YOUR CODE FOR TASK 6 HERE ...
+
 sp_returns.describe()
 
 
@@ -146,11 +146,11 @@ get_ipython().run_cell_magic('nose', '', "\ndef test_sp_returns():\n    assert s
 excess_returns = stock_returns.sub(sp_returns,axis=0)
 
 # plot the excess_returns
-# ... YOUR CODE FOR TASK 7 HERE ...
+
 excess_returns.plot()
 
 # summarize the excess_returns
-# ... YOUR CODE FOR TASK 7 HERE ...
+
 sp_returns.describe()
 
 
@@ -167,11 +167,11 @@ get_ipython().run_cell_magic('nose', '', "\ndef test_excess_returns():\n    asse
 
 
 # calculate the mean of excess_returns 
-# ... YOUR CODE FOR TASK 8 HERE ...
+
 avg_excess_return = excess_returns.mean()
 
 # plot avg_excess_returns
-# ... YOUR CODE FOR TASK 8 HERE ...
+
 avg_excess_return.plot.bar(title='Mean of the Return Difference')
 
 
@@ -192,7 +192,7 @@ get_ipython().run_cell_magic('nose', '', "\ndef test_avg_excess_return():\n    a
 sd_excess_return = excess_returns.std()
 
 # plot the standard deviations
-# ... YOUR CODE FOR TASK 9 HERE ...
+
 sd_excess_return.plot.bar(title='Standard Deviation of the Return Difference')
 
 
@@ -217,7 +217,7 @@ annual_factor = np.sqrt(252)
 annual_sharpe_ratio = daily_sharpe_ratio.mul(annual_factor)
 
 # plot the annualized sharpe ratio
-# ... YOUR CODE FOR TASK 10 HERE ...
+
 annual_sharpe_ratio.plot.bar(title='Annualized Sharpe Ratio: Stocks vs S&P 500')
 
 
